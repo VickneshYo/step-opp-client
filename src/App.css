@@ -1,0 +1,263 @@
+:root {
+  --primary-blue: #9da5b1;
+  --primary-dark: #321fdb ;
+  --primary-light: #acbfe6;
+  
+  --secondary-blue: #7986cb;
+  --secondary-dark: #49599a;
+  --secondary-light: #aab6fe;
+
+  --bs-blue: #000000;
+  --bs-purple: #6f42c1;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+
+
+
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.body{
+  /* background: linear-gradient(90deg, rgb(100, 95, 209) 0%, rgba(9,9,121,1) 43%, rgba(0,212,255,1) 100%);  */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  }
+
+.header{
+  color: white;
+  background-color:  var(--primary-blue);
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 300;
+  height:75px;
+}
+
+
+.opp-button{
+  background-color: #00004d;
+  color:blanchedalmond;
+  border-radius: 15px;
+}
+
+
+.filter{
+  margin-left: 100px;
+  height:40px;
+  width:120px;
+  background-color: #800000;
+  color:white;
+  border-radius: 10px;
+}
+
+#dropdown-item-button{
+  background-color:#002966;
+  margin-left: 100px;
+  margin-bottom:30px;
+  color:white;
+  text-transform: uppercase;
+}
+
+.btn-slide-bottom {
+	border: none;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+	color: #fff !important;
+	font-weight: 700;
+	font-size: 15px;
+	background-color: #333;
+	padding: 17px 45px;
+	transition: all .5s ease-in-out;
+}
+.btn-slide-bottom span {
+	position: relative;
+	z-index: 1;
+}
+.btn-slide-bottom:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 450%;
+	width: 150%;
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	-webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+	transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+.btn-slide-bottom:hover:after {
+	-webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+	transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.btn-slide-bottom--red:after{
+	background:#002984;
+  
+}
+.btn-slide-bottom--green:after{
+	background: #80ED99;
+}
+
+
+.navbar{
+  background-color: var(--bs-blue);
+  height: 80px;
+  position:sticky;
+}
+
+.nav-link{
+  color: white;
+}
+
+.text-muted{
+  color:black;
+}
+.about{
+  color:var( --primary-dark);
+  font-size: 25px;
+  font-family:cursive;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about2{
+  color:var( --primary-dark) ;
+  font-size: 20px;
+  text-align: center;
+  margin:10px 0px 30px 0px;
+}
+
+.tab-aboutus{
+  margin:0px 80px 0px 80px;
+}
+
+.logo-img{
+  height: 80px;
+  width: 80px;
+}
+
+.togglesearch{
+  background: #E8E8E4;
+  position: absolute;
+  top: 68px;
+  right: 1.8%;
+  width: 300px;
+  height: 36px;
+  line-height: 20px;
+  box-shadow: 0 0 10px rgba(204, 199, 199, 0.5);
+  border:3px solid var(--bs-info);
+  display: none;
+  z-index:2;
+}
+ 
+.togglesearch:before{
+  content: "";
+  position: absolute;
+  top: -32px;
+  right: 13px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid var(--bs-info);
+}
+ 
+.togglesearch input[type="text"]{
+  width: 220px;
+  padding: 5px 10px;
+  margin-left: 0px;
+  border: 1px solid var(--bs-info);
+  outline: none;
+}
+ 
+.togglesearch input[type="button"]{
+  width: 80px;
+  padding: 5px 0;
+  background: var(--bs-info);
+  color: #fff;
+  margin-left: -6px;
+  border: 1px solid var(--bs-info);
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
