@@ -12,23 +12,38 @@ import { ToggleButtonGroup } from 'react-bootstrap'
 import { Switch } from 'react-router'
 
 
+// import AdapterDateFns from '@mui/lab/AdapterDateFns';
+// import LocalizationProvider from '@mui/lab/LocalizationProvider';
+// import DateTimePicker from '@mui/lab/DateTimePicker';
+// import TextField from '@mui/material/TextField';
+
+
+
+
 
 
 
 
 export default function Postopportunity() {
 
+  // function App() {
+  //   return (
+  //     <LocalizationProvider dateAdapter={AdapterDateFns}>...</LocalizationProvider>
+  //   );
+  // }
+  // const [value, setValue] = React.useState(new Date());
+
   // const history=useHistory();
   const [opps,setOpps]=useState({
-    name:'',
-    desc:'',
-    oppType:'',
-    benifits:'',
-    applyLink:'',
-    eligibility:'',
-    hasDeadline:'',
-    deadline:'',
-    location:''})
+    name:''})
+    // desc:'',
+    // oppType:'',
+    // benifits:'',
+    // applyLink:'',
+    // eligibility:'',
+    // hasDeadline:'',
+    // deadline:'',
+    // location:''})
 
     const handleSubmit = async(e)=>{
 
@@ -38,18 +53,18 @@ export default function Postopportunity() {
         name:opps.name,
         desc:opps.desc,
         oppType:opps.oppType,
+        userType:opps.userType,
         benifits:opps.benifits,
         applyLink:opps.applyLink,
         //const images:opps.photo,
         eligibility:opps.eligibility,
-        hasDeadline:opps.hasDeadline,
+        // hasDeadline:opps.hasDeadline,
         deadline:opps.deadline,
         location: opps.location
-
     }
-    console.log(newOpps) 
+    // console.log(newOpps); 
     const opportunities=await axios.post('http://localhost:8000/api/opportunities', newOpps)
- console.log(opportunities)
+ console.log(opportunities);
 //  history.push("/Userprofile");
 }
 const handleChange = (e)=>{
@@ -93,16 +108,13 @@ const handleChange = (e)=>{
         </div>
 <br />
 <Form className="container">
-
-
-
 <div className="f1">
 <Form.Group as={Row} className="mb-3" controlId="formHorizontalOppname">
     <Form.Label column sm={2}>
       Opportunity Name :-
     </Form.Label>
     <Col sm={3}>
-      <Form.Control type="oppname" placeholder="Type Opportunity Name"  value={opps.name}  onChange={handleChange} />
+      <Form.Control name="name" placeholder="Type Opportunity Name"  value={opps.name}  onChange={handleChange} />
     </Col>
   </Form.Group>
   </div> <br />
@@ -113,7 +125,7 @@ const handleChange = (e)=>{
         Opportunity Description :-
       </Form.Label>
       <Col sm={3}>
-      <Form.Control as="textarea" rows={3}  placeholder="Type Description" value={opps.desc}  onChange={handleChange}/>
+      <Form.Control as="textarea" rows={3}  name="desc" placeholder="Type Description" value={opps.desc}  onChange={handleChange}/>
       </Col>
   </Form.Group>
   </fieldset>
@@ -125,16 +137,17 @@ const handleChange = (e)=>{
     </Form.Label>
     
     <Col sm={3}>
+    {/* <Form.Control placeholder="Opportunity Type"  name="oppType" value={opps.oppType}  onChange={handleChange} /> */}
     <Dropdown>
     <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
       Select Type :-
     </Dropdown.Toggle>
 
-    <Dropdown.Menu variant="dark" value={opps.oppType}  onChange={handleChange}>
+    <Dropdown.Menu variant="dark" name="oppType"  onChange={handleChange}>
       <Dropdown.Item href="#/action-1" active>
         Jobs
       </Dropdown.Item>
-      <Dropdown.Item href="#/action-2">Challenges</Dropdown.Item>
+      <Dropdown.Item value={opps.oppType} href="#/action-2">Challenges</Dropdown.Item>
       <Dropdown.Item href="#/action-3">Competitions</Dropdown.Item>
       <Dropdown.Item href="#/action-4">Workshops</Dropdown.Item>
       <Dropdown.Item href="#/action-4">Internships</Dropdown.Item>
@@ -151,7 +164,7 @@ const handleChange = (e)=>{
         Benefits :-
       </Form.Label>
       <Col sm={3}>
-      <Form.Control as="textarea" rows={3} value={opps.benifits}  onChange={handleChange} />
+      <Form.Control as="textarea" rows={3}  name="benifits" value={opps.benifits}  onChange={handleChange} />
       </Col>
   </Form.Group>
   </fieldset>
@@ -162,7 +175,7 @@ const handleChange = (e)=>{
         Eligibilities :-
       </Form.Label>
       <Col sm={3}>
-      <Form.Control as="textarea" rows={3} value={opps.eligibility}  onChange={handleChange} />
+      <Form.Control as="textarea" rows={3} name="eligibility" value={opps.eligibility}  onChange={handleChange} />
       </Col>
   </Form.Group>
   </fieldset>
@@ -172,7 +185,7 @@ const handleChange = (e)=>{
       Apply Link :-
     </Form.Label>
     <Col sm={3}>
-      <Form.Control type="applylink" value={opps.applyLink}  onChange={handleChange}/>
+      <Form.Control type="applylink"  name="applyLink" value={opps.applyLink}  onChange={handleChange}/>
     </Col>
   </Form.Group>
 
@@ -182,9 +195,10 @@ const handleChange = (e)=>{
         Has Deadline :-
       </Form.Label>
       <Col sm={3}>
-         {/*} <Form.Label className="switch">
-            <InputGroup.Checkbox/>
-            <span className="slider" />
+        {/*  <Form.Label className="switch">
+            <InputGroup.Radio/>
+            <InputGroup.Radio/>
+            <span className="slider"/>
     </Form.Label>
 
     <div>
@@ -194,6 +208,7 @@ const handleChange = (e)=>{
         handleDiameter      
         />
     </div>*/}
+     <Form.Control type="applylink"  name="hasDeadline" value={opps.hasDeadline}  onChange={handleChange}/>
       
       </Col>
       </Form.Group>
@@ -205,10 +220,22 @@ const handleChange = (e)=>{
       Deadline :-
     </Form.Label>
     <Col sm={3}>
-      <Form.Control type="deadline" value={opps.deadline}  onChange={handleChange}/>
+      {/* <Form.Control type="deadline" value={opps.deadline}  onChange={handleChange}/> */}
+      {/* <ControlLabel>Label</ControlLabel> */}
+      {/* <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <DateTimePicker
+        renderInput={(props) => <TextField {...props} />}
+        label="DateTimePicker"
+        value={value}
+        onChange={(newValue) => {
+          setValue(newValue);
+        }}
+      />
+    </LocalizationProvider> */}
+     
+      {/* <HelpBlock>Help</HelpBlock> */}
 
-
-      
+      <Form.Control type="applylink"  name="deadline" value={opps.deadline}  onChange={handleChange}/>
 
     </Col>
   </Form.Group>
@@ -281,12 +308,13 @@ const handleChange = (e)=>{
       <Dropdown.Item href="#/action-4">Vavuniya</Dropdown.Item>
     </Dropdown.Menu>
   </Dropdown>
+   {/* <Form.Control placeholder="Type Opportunity Name"   name="location" value={opps.location}  onChange={handleChange} /> */}
   </Col>
   </Form.Group>
   </fieldset>
   <br />
-
-  <fieldset>
+{/* 
+  {/* <fieldset>
   <Form.Group as={Row} className="mb-3" controlId="formHorizontaldeadline">
     <Form.Label column sm={2}>
       Featured Image :-
@@ -295,7 +323,7 @@ const handleChange = (e)=>{
       <Button variant="secondary"   >Upload image</Button>{' '}
     </Col>
     </Form.Group>
-    </fieldset>
+    </fieldset> */} 
 
 
 

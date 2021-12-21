@@ -7,7 +7,8 @@ import { Navbar } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import {AiOutlineSearch} from 'react-icons/ai'
 import logo from '../Photos/logo2c.png'
-import logo2 from '../Photos/logo2.png'
+import logo2 from '../Photos/Open.png'
+
 
 import '../pages/js/navbar'
 
@@ -24,12 +25,12 @@ export default function Navigation() {
         style={{ maxHeight: '80px' }}
         navbarScroll
       >
-        <Nav.Link style={{color:"white"}} href="/">Home</Nav.Link>
-        <Nav.Link style={{color:"white"}} href="/browseopp" >Browse Opportunities</Nav.Link>
+        <Nav.Link id="nav-links"  href="/">Home</Nav.Link>
+        <Nav.Link  id="nav-links" href="/browseopp" >Browse Opportunities</Nav.Link>
        
       </Nav>
-      <Nav.Link style={{color:"white"}} href="/postopp" className="d-flex">Post an opportunity</Nav.Link>
-      <Nav.Link style={{color:"white"}} href="/subscribe" className="d-flex">Subscribe</Nav.Link>
+      <Nav.Link id="nav-links" href="/postopp" className="d-flex">Post an opportunity</Nav.Link>
+      <Nav.Link id="nav-links"  href="/subscribe" className="d-flex">Subscribe</Nav.Link>
       {/* <Form className="d-flex">
         <FormControl
           type="search"

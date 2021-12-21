@@ -32,7 +32,8 @@ export default function Browseopp() {
   
     try {
       axios
-        .get(`http://localhost:8000/api/admin/opportunities`)
+        .get(`http://localhost:8000/api/opportunities/approved`)
+        // .get(`http://localhost:8000/api/admin/opportunities`)
         .then((response) => {setfilteredOpps(response.data)
                       setOpps(response.data)});
         

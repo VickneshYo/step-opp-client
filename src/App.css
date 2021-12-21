@@ -149,13 +149,13 @@
 
 
 .navbar{
-  background-color: var(--bs-blue);
+  background-color: var(white);
   height: 80px;
   position:sticky;
 }
 
 .nav-link{
-  color: white;
+  color: var(--bs-blue);
 }
 
 .text-muted{
@@ -182,8 +182,21 @@
 
 .logo-img{
   height: 80px;
-  width: 80px;
+  width: 180px;
 }
+#nav-links {
+  display: inline-block;
+  height: 40px;
+  /*will change background-color of element */
+  color: black; /*will change color of text within the element */
+  border-radius: 18px;
+  }
+  
+#nav-links:hover {
+  background-color:var(--bs-blue); /*will change background-color of element on hover */
+  color: white; /*will change color of text within the element on hover */
+  border-radius: 18px;
+  }
 
 .togglesearch{
   background: #E8E8E4;

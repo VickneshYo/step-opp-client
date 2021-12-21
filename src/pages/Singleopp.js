@@ -18,6 +18,8 @@ import { IconName } from "react-icons/fa";
 import { FaRegHandPointUp } from 'react-icons/fa';
 import { FaBell } from 'react-icons/fa';
 import { FaRegThumbsUp } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
+import {HiTrendingUp} from 'react-icons/hi';
 
 import axios from "axios";
 import React, { useState, useEffect } from "react";
@@ -87,8 +89,8 @@ export default function Singleopp() {
                             <Button1 variant="secondary" className="btn-sub" style={{margin:"12px"}} href="/subscribe"> SUBSCRIBE  <FaRegBell/></Button1>
                             <Button1 variant="secondary" className="btn-sub" style={{margin:"12px"}}>  Facebook <i class="bi-facebook fs-6"></i></Button1>
                             </div>
-                            <p class="card-text">{opp.desc}</p>
-                            <a class="btn btn-primary" href="#!">Read more →</a>
+                            <p class="card-text">{opp.desc}   <a class="" href="#!"> Read more →</a></p>
+                          
                         </div>
                         
  
@@ -128,7 +130,7 @@ export default function Singleopp() {
                         <div class="col-lg-6">
                            
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src={opp6} alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src={pic1} alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">January 1, 2021</div>
                                     <h2 class="card-title h4">Post Title</h2>
@@ -138,7 +140,7 @@ export default function Singleopp() {
                             </div>
                            
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src={opp6} alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src={pic1} alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">January 1, 2021</div>
                                     <h2 class="card-title h4">Post Title</h2>
@@ -150,17 +152,17 @@ export default function Singleopp() {
                         <div class="col-lg-6">
                          
                         <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src={opp6} alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src={pic1} alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">January 1, 2021</div>
                                     <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque,</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.,</p>
                                     <a class="btn btn-primary" href="#!">Read more →</a>
                                 </div>
                             </div>
                            
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src={opp6} alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" src={pic1} alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">January 1, 2021</div>
                                     <h2 class="card-title h4">Post Title</h2>
@@ -188,47 +190,63 @@ export default function Singleopp() {
                 <div class="col-lg-4">
                 <div class="card mb-4">
                             
-                    <Card.Header as="h5" align="center">OO Hits
-                    <div ClassName="icon" align="center">
-                        <FaRegHandPointUp />
-                    </div>
-                    </Card.Header>
-                                <div class="card-body">Watch to Learn about week's most popular opportunities!</div>
-                                <       div ClassName="custom-youtube-player" align="center" >
-                                <iframe
-                                id="player" 
-                                type="text/html" 
-                                width="200" 
-                                height="100"
-                                src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
-                                frameborder="0">
-
-                                </iframe>
-                                <p><a href="">Step Opps</a></p>
-                                
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto btn-block w-5" href="/Singleopp">Subscribe</a></div>
-                                <FaRegThumbsUp />   <FaBell />
-                            </div>
-                                
-                            <hr />
-                    <Card>
-                        <Card.Header as="h5" align="center">Trending</Card.Header>
-                        <br />
-                                <Card.Body>
-                                    <div class="card mt-4">
-                                        <div class="row">
-                                            <div class ="col-md-4">
-                                                <img src={pic1} height="132px" width="100px"/>
-                                            </div>
-                                                <div class="col-md-8">
-                                                    <h6 class="card-title mt-3"><b>Special title treatment</b></h6>
-                                                        <p align="justify">
-                                                            With supporting text below as a natural lead-in to additional content.
-                                                        </p>
-                                                </div>
-                                        </div>
+                            <pre><Card.Header as="h5" align="center">OO Hits <FaYoutube /></Card.Header></pre>
+                            
+                                    
+                           
+                            
+                                        <div class="card-body">Watch to Learn about week's most popular opportunities!</div>
+                                        <       div ClassName="custom-youtube-player" align="center" >
+                                        <iframe
+                                        id="player" 
+                                        type="text/html" 
+                                        width="350" 
+                                        height="200"
+                                        src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+                                        frameborder="0">
+        
+                                        </iframe>
+                                        <p><a href="">Step Opps</a></p>
+                                       
+                                    
+                                        <FaRegThumbsUp />   <FaBell />
                                     </div>
-                                    </Card.Body><hr />
+                                      
+                                            <hr />
+                                <Card>
+          <pre><Card.Header as="h5" align="center">Trending <HiTrendingUp /></Card.Header></pre>
+          <br />
+                <Card.Body>
+                    <div class="card mt-4">
+                        <div class="row">
+                            <div class ="col-md-4">
+                                <img src={pic1} height="132px" width="100px"/>
+                            </div>
+                                <div class="col-md-8">
+                                    <h6 class="card-title mt-3"><b>Special title treatment</b></h6>
+                                        <p align="justify">
+                                            With supporting text below as a natural lead-in to additional content.
+                                        </p>
+                                </div>
+                        </div>
+                    </div>
+                    </Card.Body><hr />
+        
+                    <Card.Body>
+                    <div class="card mt-4">
+                        <div class="row">
+                            <div class ="col-md-4">
+                                <img src={pic1} height="132px" width="100px"/>
+                            </div>
+                                <div class="col-md-8">
+                                    <h6 class="card-title mt-3"><b>Special title treatment</b></h6>
+                                        <p align="justify">
+                                            With supporting text below as a natural lead-in to additional content.
+                                        </p>
+                                </div>
+                        </div>
+                    </div>
+                    </Card.Body><hr />
         
                     <Card.Body>
                     <div class="card mt-4">

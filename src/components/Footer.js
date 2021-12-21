@@ -18,7 +18,7 @@ export default function Footer() {
                             <li class="list-inline-item " style={{color:"black"}}>⋅</li>
                             <li class="list-inline-item " ><a href="#!" style={{textDecoration:"none"},{color:"black"}}>Terms of Use</a></li>
                         </ul>
-                        <p class="text-dark medium mb-4 mb-lg-0">&copy; Opportunities.lk</p>
+                        <p class="text-dark medium mb-4 mb-lg-0">&copy; OpenOpportunities.lk</p>
                         <p class="text-dark medium mb-4 mb-lg-0">All Rights Reserved.</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
